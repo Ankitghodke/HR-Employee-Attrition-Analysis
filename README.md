@@ -1,9 +1,9 @@
-# HR Employee Attrition Analysis
+# 👥 HR Employee Attrition Analysis
 Python · Pandas · Seaborn · Plotly · EDA · Google Colab
 
 ---
 
-## Overview
+## 📌 Overview
 
 HR teams rarely know which employees are at risk of leaving until it's too late. This project digs into 1,200 records to find which departments, salary bands, and satisfaction levels correlate most with exits — so retention efforts can be targeted rather than guesswork.
 
@@ -17,7 +17,7 @@ The analysis covers attrition patterns by department, salary, job satisfaction, 
 
 ---
 
-## How it works
+## 🏗️ How it works
 ```
 Raw Dataset (1,200 records | 9 features)
         ↓
@@ -32,7 +32,7 @@ Business Insights & HR Recommendations
 
 ---
 
-## Dataset
+## 📊 Dataset
 
 | Metric | Value |
 |--------|-------|
@@ -49,7 +49,7 @@ Business Insights & HR Recommendations
 
 ---
 
-## Analysis
+## 🧠 Analysis
 
 **Data cleaning**
 - Missing values: median imputation for Age, mode imputation for categorical columns
@@ -71,7 +71,7 @@ Business Insights & HR Recommendations
 
 ---
 
-## Department attrition
+## 🔍 Department attrition
 
 | Department | Employees | Left | Attrition rate |
 |------------|-----------|------|----------------|
@@ -83,7 +83,7 @@ Business Insights & HR Recommendations
 
 ---
 
-## Key findings
+## 📈 Key findings
 
 | Finding | Numbers | What it means |
 |---------|---------|---------------|
@@ -97,7 +97,7 @@ Business Insights & HR Recommendations
 
 ---
 
-## File structure
+## 📂 File structure
 ```
 HR-Employee-Attrition-Analysis/
 ├── hrdata.ipynb
@@ -107,7 +107,7 @@ HR-Employee-Attrition-Analysis/
 
 ---
 
-## How to run
+## 🚀 How to run
 
 1. Open `hrdata.ipynb` in Google Colab or Jupyter
 2. Upload `HR_Employee_Attrition_Dataset.csv` to your environment
@@ -115,7 +115,7 @@ HR-Employee-Attrition-Analysis/
 
 ---
 
-## Conclusions
+## 🎯 Conclusions
 
 The headline number is 20.1%, but the more interesting patterns sit underneath it.
 
