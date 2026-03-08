@@ -1,22 +1,23 @@
-# 👥 HR Employee Attrition Analysis
-### Python | Pandas | Seaborn | Plotly | EDA | Google Colab
+# HR Employee Attrition Analysis
+Python · Pandas · Seaborn · Plotly · EDA · Google Colab
 
 ---
 
-## 📌 Project Overview
+## Overview
 
-A Python-based exploratory data analysis project analyzing **1,200 employee records across 5 departments** to uncover attrition patterns, salary behavior, and workforce trends — identifying key factors that influence employee exits and supporting data-driven HR decision making.
+HR teams rarely know which employees are at risk of leaving until it's too late. This project digs into 1,200 records to find which departments, salary bands, and satisfaction levels correlate most with exits — so retention efforts can be targeted rather than guesswork.
 
-**Tech Stack:**
-- **Python** (Pandas, NumPy) — Data Cleaning, Preprocessing
-- **Seaborn & Matplotlib** — Statistical Visualizations
-- **Plotly Express** — Interactive Charts
-- **Google Colab** — Cloud Development Environment
+The analysis covers attrition patterns by department, salary, job satisfaction, and work-life balance across 5 departments.
+
+**Tech stack:**
+- Python (Pandas, NumPy) — data cleaning and preprocessing
+- Seaborn & Matplotlib — statistical charts
+- Plotly Express — interactive charts
+- Google Colab — development environment
 
 ---
 
-## 🏗️ Project Architecture
-
+## How it works
 ```
 Raw Dataset (1,200 records | 9 features)
         ↓
@@ -31,102 +32,95 @@ Business Insights & HR Recommendations
 
 ---
 
-## 📊 Dataset Overview
+## Dataset
 
 | Metric | Value |
 |--------|-------|
-| Total Employees | 1,200 |
-| Employees Who Left | 241 (20.1%) |
-| Employees Who Stayed | 959 (79.9%) |
-| Avg Monthly Salary | ₹67,003 |
-| Avg Tenure | 13 years |
-| Max Tenure | 40 years |
-| Total Features | 9 |
+| Total employees | 1,200 |
+| Employees who left | 241 (20.1%) |
+| Employees who stayed | 959 (79.9%) |
+| Avg monthly salary | ₹67,003 |
+| Avg tenure | 13 years |
+| Max tenure | 40 years |
+| Total features | 9 |
 | Departments | 5 (Sales, IT, Finance, HR, Operations) |
-| Performance Levels | 4 (Low, Medium, High, Very High) |
-| Work-Life Balance Categories | 4 (Poor, Average, Good, Excellent) |
+| Performance levels | 4 (Low, Medium, High, Very High) |
+| Work-life balance categories | 4 (Poor, Average, Good, Excellent) |
 
 ---
 
-## 🧠 Analysis Performed
+## Analysis
 
-### 🔹 Data Cleaning & Preprocessing
-- Handled missing values using **median imputation** for Age and **mode imputation** for categorical columns
-- Detected and treated outliers in Age and Years_at_Company using **IQR method** (Seaborn Boxplot)
-- Standardized categorical columns — Department, Job Satisfaction, Work-Life Balance
-- Created **Salary Band** feature using pd.qcut() — Low, Medium, High, Very High
+**Data cleaning**
+- Missing values: median imputation for Age, mode imputation for categorical columns
+- Outliers in Age and Years_at_Company detected using IQR method (Seaborn boxplot)
+- Categorical columns standardized — Department, Job Satisfaction, Work-Life Balance
+- Salary Band feature added via pd.qcut() — Low, Medium, High, Very High
 
-### 🔹 Exploratory Data Analysis
-- Department-wise attrition rate comparison across 5 departments
-- Job Satisfaction level vs attrition count analysis
-- Salary distribution comparison — employees who left vs stayed
-- Work-Life Balance category vs attrition breakdown
-- Performance Rating distribution across 1,200 employees
+**Exploratory analysis**
+- Department-wise attrition rates across all 5 departments
+- Job satisfaction level vs attrition count
+- Salary distribution — employees who left vs. stayed
+- Work-life balance category vs attrition breakdown
+- Performance rating distribution across 1,200 employees
 
-### 🔹 Visualizations Used
-- **Pie Chart** — Overall attrition rate (20.1% vs 79.9%)
-- **Bar Chart** — Department-wise avg monthly salary
-- **Bar Chart** — Department-wise attrition count
-- **Bar Chart** — Job Satisfaction level vs attrition
-- **Box Plot** — Age outlier detection
-- **Box Plot** — Years at Company outlier detection
+**Charts**
+- Pie chart — overall attrition split (20.1% vs 79.9%)
+- Bar charts — department salary averages, attrition counts, satisfaction vs attrition
+- Box plots — age and tenure outlier detection
 
 ---
 
-## 🔍 Department-wise Attrition
+## Department attrition
 
-| Department | Employees | Left | Attrition Rate |
+| Department | Employees | Left | Attrition rate |
 |------------|-----------|------|----------------|
-| Finance | 183 | 41 | 22.4% — Highest |
+| Finance | 183 | 41 | 22.4% — highest |
 | Sales | 309 | 65 | 21.0% |
 | IT | 372 | 76 | 20.4% |
 | HR | 151 | 26 | 17.2% |
-| Operations | 117 | 17 | 14.5% — Lowest |
+| Operations | 117 | 17 | 14.5% — lowest |
 
 ---
 
-## 📈 Key Business Insights
+## Key findings
 
-| Finding | Metric | Insight |
-|---------|--------|---------|
-| Overall Attrition | 241/1,200 (20.1%) | 1 in 5 employees leaving |
-| Highest Risk Dept | Finance — 22.4% | Needs immediate HR intervention |
-| Salary Paradox | Left: ₹67,703 vs Stayed: ₹66,828 | Salary alone doesn't prevent attrition |
-| WLB Surprise | Good WLB — 23.2% attrition | Hidden dissatisfaction factors exist |
-| Low WLB Retention | Poor WLB — only 16.7% attrition | Unexpected retention pattern |
-| Avg Tenure | 13 years | Strong long-term employee base |
-| Performance Balance | High (301) \| Very High (303) \| Medium (309) \| Low (287) | No single tier dominates attrition |
+| Finding | Numbers | What it means |
+|---------|---------|---------------|
+| Overall attrition | 241/1,200 (20.1%) | 1 in 5 employees left |
+| Highest-risk dept | Finance — 22.4% | Leads all departments by a margin |
+| Salary paradox | Left: ₹67,703 / Stayed: ₹66,828 | Leavers earned ₹875 more on average |
+| WLB anomaly | Good WLB — 23.2% attrition | Higher exit rate than "Poor" WLB group |
+| Poor WLB retention | 16.7% attrition | Lowest attrition of any WLB category |
+| Avg tenure | 13 years | Long-tenured workforce overall |
+| Performance split | High (301) / Very High (303) / Medium (309) / Low (287) | Roughly even across all four tiers |
 
 ---
 
-## 📂 File Structure
-
+## File structure
 ```
-📁 HR-Employee-Attrition-Analysis
-├── hrdata.ipynb                          # Python EDA notebook
-├── HR_Employee_Attrition_Dataset.csv     # Raw dataset
-└── README.md                             # Project documentation
+HR-Employee-Attrition-Analysis/
+├── hrdata.ipynb
+├── HR_Employee_Attrition_Dataset.csv
+└── README.md
 ```
 
 ---
 
-## 🚀 How to Use
+## How to run
 
-1. Open **hrdata.ipynb** in Google Colab or Jupyter Notebook
-2. Upload **HR_Employee_Attrition_Dataset.csv** to your environment
-3. Run all cells sequentially — data cleaning → EDA → visualizations
-4. All charts are interactive (Plotly) and statistical (Seaborn/Matplotlib)
+1. Open `hrdata.ipynb` in Google Colab or Jupyter
+2. Upload `HR_Employee_Attrition_Dataset.csv` to your environment
+3. Run all cells in order
 
 ---
 
-## 🎯 Conclusion
+## Conclusions
 
-This project analyzes **1,200 employee records** to uncover that:
-- 👔 **Finance department leads attrition at 22.4%** — highest risk across all 5 departments
-- 💰 **Salary paradox confirmed** — employees who left earned ₹875 more on avg than those who stayed
-- ⚖️ **Good work-life balance shows highest attrition (23.2%)** — suggesting deeper dissatisfaction factors
-- 📊 **20.1% overall attrition rate** — 241 employees left out of 1,200
-- 🏢 **Operations is the most stable department** at only 14.5% attrition
+The headline number is 20.1%, but the more interesting patterns sit underneath it.
 
-These insights directly support HR teams in building **targeted retention strategies** across high-risk departments.
+Employees who left were actually earning more than those who stayed — ₹875/month more on average. That takes salary off the table as the main driver. Finance leads all departments at 22.4% attrition, which is harder to explain given it's not the lowest-paid department.
 
+The work-life balance result is the strangest finding. Employees who rated their WLB as "Good" left at 23.2% — a higher rate than those who rated it "Poor" (16.7%). It likely means something else is pushing exits in that group: growth opportunities, management quality, or role fit. WLB scores alone don't predict who stays.
+
+Operations is the most stable department at 14.5%. Finance is the least. That gap is probably where any retention effort should start.
